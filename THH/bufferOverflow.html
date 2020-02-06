@@ -67,17 +67,22 @@
 									Resumo
 								</h3>
 								<p>
-									Buffer overflow é um exploit de baixo nível. Isto é, ele trabalha com linguagem de máquina.
+									Esse artigo explica o que é e como exploitar o Buffer Overflow.
 								</p>
 								<p>
-									Neste caso, se trata de exceder o limite do buffer na memória RAM com um código arbitrário até sobreescrever o topo do Stack.
-									O topo do Stack possui o endereço da próximo instrução a ser executada.
+									Buffer overflow
+									é uma anomalia em que um programa, ao escrever valores na memória,
+									ultrapassa o limite do <i>buffer</i> e acaba por sobreescrever informações que não deveria.
 								</p>
 								<p>
-									Desta forma, pode-se executar qualquer instrução que esteja em um endereço que o programa tenha acesso.
+									Essa anomalia geralmente ocorre em programas mal escritos, que assumem um comprimento maxímo para os <i>inputs</i> e não
+									verifica essa premissa.
 								</p>
+
 								<p>
+									Para compreender em detalhes como a anomalia ocorre e como a exploitar, é necessário entender como linguagem de maquina é executada pela CPU.
 								</p>
+
 								<!--<ul class="feature-icons">
 									<li class="icon solid fa-code">Write all the code</li>
 									<li class="icon solid fa-cubes">Stack small boxes</li>
@@ -118,11 +123,10 @@
 										O exploit
 									</a></h3>
 									<p>
-										Tropical Hacker's Hut is my blog about data security and hacker's stuff.
-										You may visit it <a href = "thh.html"> here </a>,
-										but be aware that it's written in brazilien
-										portuguese.
+										Para exploitar essa falha é submetido um input com código malicioso que sobreescrever a memoria até o topo do stack e coloca no topo do stack o endereço do inicio <!DOCTYPE html>
+										código malicioso.
 									</p>
+
 								</div>
 							</section>
 
