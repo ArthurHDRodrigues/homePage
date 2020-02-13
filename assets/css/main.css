@@ -224,6 +224,13 @@ input, select, textarea {
 			padding: 1em 1.5em;
 		}
 
+	.mag{
+		border: solid #4acaa8;
+		border-radius: 5px;
+		padding-top: 50px;
+		justify-content: center;
+	}
+
 	.align-left {
 		text-align: left;
 	}
