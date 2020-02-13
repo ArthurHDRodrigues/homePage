@@ -2820,10 +2820,9 @@ input, select, textarea {
 /* Tag de denied*/
 		#denied {
 		width: 100px;
-		border: 1px solid darkred;
+		border: 1px solid orangered;
 		border-radius: 5px;
-		color: darkred;
-		background-color: gainsboro;
+		color: orangered; /*orangered = #FF4500*/
 		text-align: center;
 		}
 
