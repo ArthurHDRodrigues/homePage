@@ -209,6 +209,11 @@ input, select, textarea {
 		margin: 0 0.25em;
 		padding: 0.25em 0.65em;
 	}
+	code span
+{
+    display: block;
+		white-space: pre-wrap
+}
 
 	pre {
 		font-family: "Source Code Pro", monospace;
