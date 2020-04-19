@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<!--
+	Read Only by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Tropical Hacker Hut</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />-->
+		<link rel="shortcut icon" type="image/png" href="images/plameira_icon.png"/>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<section id="header">
+				<header>
+					<h1 id="logo"><a href="../index.html">Tropical Hacker Hut</a></h1>
+			</header>
+				<nav id="nav">
+					<ul>
+						<li><a href="#zero" class="active">Download</a></li>
+						<li><a href="#one">N3ws</a></li>
+						<li><a href="#two">SysCalls</a></li>
+						<li><a href="#three">Big Brother</a></li>
+						<li><a href="#four">Linux Kernel Modules</a></li>
+						<li><a href="#five">Honeypots</a></li>
+						<li><a href="#six">Sockets</a></li>
+						<li><a href="#seven">Espionagem Digital</a></li>
+						<li><a href="#eight">As falhas do Kit.net</a></li>
+					</ul>
+				</nav>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="zero">
+								<div class="container">
+									<header class="major">
+										<h2>
+											<a href="../index.html">
+												Tropical Hacker's Hut
+											</a>
+										</h2>
+										<p>
+											Comentários sobre a revista H3ck4r #9
+										</p>
+									</header>
+									<div class="row">
+										<div class="col">
+                    <a href="../pdfs/hacker_09.pdf" download class="image">
+											<img src="../capas/capa_9.jpg" alt="" /></a>
+									</div>
+									<div class="col-6">
+										<p>
+											Como a revista é antiga, muitos links e programas ficaram desatualizados.
+											Assim escrevi essa página que contem comentários sobre os artigos publicados nela.
+										</p>
+										<p>
+											É recomendado acompanhar os comentários junto a revista aberta.
+										</p>
+										<a class="button primary" href="../pdfs/hacker_09.pdf">
+											Download
+										</a>
+								</div></div></div>
+							</section>
+							<!-- One -->
+								<section id="one">
+									<div class="container">
+										<h3>N3ws</h3>
+									<p>
+										Na matéria <b> O espelho tem duas faces</b>,
+										 <a href="www.delta5.com.br">delta5 </a> e <a href="https://blackhat.info/">blackhat.info</a>
+										 estão fora do ar, mas
+										 <a href="http://www.zone-h.org/">zone-h</a> e
+										 <a href="http://www.totalsecurity.com.br/">blackhat.info</a> estão de pé.
+									</p>
+
+									</div>
+								</section>
+
+						<!-- Two-->
+							<section id="two">
+								<div class="container">
+									<h3>SysCall</h3>
+									<p>
+										O artigo é muito bom, mas algumas coisas estão datadas ou mau explicadas. Antes de mais nada, é necessario
+										 entender um pouco de assembly, para isso indico
+										 <a href="https://www.tutorialspoint.com/assembly_programming/index.htm">tutorial de assembly</a>.
+									</p><p>
+										Para chamar uma SysCall você deve atribuir os
+										valore adequados nos registradores corretops e executar a interrupção <code>int 0x80</code>.
+										O registrador <code>eax</code> possui o indice númerico do SysCall, você pode consultar
+										<a href="https://github.com/torvalds/linux/blob/master/arch/x86/entry/syscalls/syscall_32.tbl">
+											tabela dos indices
+										</a>.
+									</p>
+									<p>
+<pre><code>section .data
+
+msg db "Ola mundo",0xa ;0xa indica final de linha
+
+len equ $ - msg
+
+section .text
+
+global _start
+
+_start:
+
+mov ebx,1   ;file descriptor (stdout)
+mov eax,4   ;syscall 4 = write
+mov edx,len
+mov ecx,msg
+int 0x80    ;interrompe para o kernel
+
+mov ebx,0
+mov eax,1   ;syscall 1 = exit
+int 0x80</code></pre>
+									</p>
+
+									<p>
+										Salve o arquivo como <code>asm1.asm</code> ao invés de <code>asm1.s</code>. Para compilar use
+									</p>
+									<p>
+<pre><code>nasm -f elf64 asm1.asm</code></pre>
+									</p>
+									<p>
+									A opção <code>-f elf64</code> indica que vamos compilar para linux 64 bits. Rode
+									<code>nasm -fh</code> para ver as opções em outras arquiteturas. Em seguida, faça o link simbolico:
+									</p>
+									<p>
+<pre><code>ld asm1.o -o asm1</code></pre>
+									</p>
+									<p>
+										e para executa-lo use
+									</p>
+<pre><code>./asm1</code></pre>
+
+								</div>
+							</section>
+
+						<!-- Three -->
+							<section id="three">
+
+								<div class="container">
+									<article>
+										<div class="inner">
+									<h3>Big Brother</h3>
+									<div class="features">
+
+								</div>
+							</div>
+								</article>
+								</div>
+							</section>
+
+						<!-- Four -->
+							<section id="four">
+								<div class="container">
+									<h3>Linux Kernel Modules</h3>
+
+
+								</div>
+							</section>
+
+							<!-- five-->
+								<section id="five">
+									<div class="container">
+										<h3>Honeypots</h3>
+
+									</div>
+								</section>
+								<!-- six-->
+								<section id="six">
+									<div class="container">
+										<h3>Sockets</h3>
+
+									</div>
+								</section>
+								<!-- seven-->
+								<section id="seven">
+									<div class="container">
+										<h3>Espionagem digital</h3>
+
+									</div>
+								</section>
+								<!-- eight-->
+								<section id="eight">
+									<div class="container">
+										<h3>As falhas do Kit.net</h3>
+										<p id="denied">
+											Datado
+										</p>
+									</div>
+								</section>
+					</div>
+				<!-- Footer -->
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+								<!--<li>&copy; Tropical . All rights reserved.</li>--><li>Design by <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../../assets/js/jquery.min.js"></script>
+			<script src="../../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../../assets/js/browser.min.js"></script>
+			<script src="../../assets/js/breakpoints.min.js"></script>
+			<script src="../../assets/js/util.js"></script>
+			<script src="../../assets/js/main.js"></script>
+
+	</body>
+</html>
