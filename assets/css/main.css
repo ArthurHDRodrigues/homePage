@@ -83,7 +83,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #fff;
+		background: #000;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -110,14 +110,14 @@ input, select, textarea {
 		-webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-		border-bottom: solid 1px #e4e4e4;
-		color: inherit;
+		border-bottom: solid 1px #91DDEB;/*#e4e4e4;*/
+		color: #91DDEB;/*inherit;*/
 		text-decoration: none;
 	}
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #4acaa8 !important;
+			color: #FF0040 !important;
 		}
 
 	strong, b {
@@ -132,8 +132,7 @@ input, select, textarea {
 	p {
 		margin: 0 0 2.25em 0;
 	}
-
-	h1, h2, h3, h4, h5, h6 {
+	h1, h2,h3, h4, h5, h6 {
 		color: #777;
 		font-weight: 700;
 		line-height: 1em;
@@ -152,6 +151,7 @@ input, select, textarea {
 	}
 
 	h3 {
+		color: #ff0040;
 		font-size: 1.75em;
 		line-height: 1.5em;
 	}
@@ -225,7 +225,7 @@ input, select, textarea {
 		}
 
 	.mag{
-		border: solid #4acaa8;
+		border: solid #80263D;
 		border-radius: 5px;
 		padding-top: 50px;
 		justify-content: center;
@@ -1792,7 +1792,7 @@ input, select, textarea {
 	}
 
 	header.major h2 {
-		color: #4acaa8;
+		color: #FF0040;#80263D;
 		font-size: 3.5em;
 	}
 
@@ -1855,7 +1855,7 @@ input, select, textarea {
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #4acaa8;
+			border-color: #80263D;
 		}
 
 	select {
@@ -1960,7 +1960,7 @@ input, select, textarea {
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #4acaa8;
+			border-color: #80263D;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2409,7 +2409,7 @@ input, select, textarea {
 			}
 
 			ul.feature-icons li:before {
-				background: #4acaa8;
+				background: #80263D;/*cor itens*/
 				border-radius: 100%;
 				color: #ffffff;
 				display: block;
@@ -2625,7 +2625,7 @@ input, select, textarea {
 		input[type="reset"].primary,
 		input[type="button"].primary,
 		.button.primary {
-			background-color: #4acaa8;
+			background-color: #80263D;
 			color: #ffffff !important;
 		}
 
@@ -2707,14 +2707,14 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background: #4acaa8;
+		background: #80263D; /*background nav*/
 		color: #d2f2e9;
 		height: 100%;
 		overflow-y: auto;
 		position: fixed;
 		text-align: center;
 		top: 0;
-		width: 23em;
+		width: 15em;
 		right: 0;
 	}
 
@@ -2797,7 +2797,7 @@ input, select, textarea {
 			}
 
 				#header > nav ul li {
-					border-top: solid 2px #5ccfb1;
+					border-top: solid 2px #a2a2a2;
 					display: block;
 					padding: 0;
 				}
@@ -2808,15 +2808,15 @@ input, select, textarea {
 						-ms-transition: none;
 						transition: none;
 						border: 0;
-						color: #ffffff !important;
+						color: #fafafa !important;
 						display: block;
 						padding: 0.85em 0;
 						text-decoration: none;
 					}
 
 						#header > nav ul li a.active {
-							background: #fff;
-							color: #4acaa8 !important;
+							background: #222;
+							color: #fff !important;
 						}
 
 					#header > nav ul li:first-child {
@@ -2836,18 +2836,18 @@ input, select, textarea {
 /* Wrapper */
 
 	#wrapper {
-		background: #fff;
+		background: #222;
 		padding-right: 23em;
 	}
 
 /* Main */
 
 	#main > section {
-		border-top: solid 6px #f4f4f4;
+		border-top: solid 3px #101010;
 	}
 
 		#main > section > .container {
-			padding: 6em 0 4em 0;
+			padding: 6em 0 5em 0;
 		}
 
 		#main > section:first-child {
@@ -2857,7 +2857,7 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
-		background: #fafafa;
+		background: #101010;
 		border-top: 0;
 		color: #c0c0c0;
 		overflow: hidden;
@@ -3094,7 +3094,7 @@ input, select, textarea {
 					}
 
 					#titleBar .toggle:before {
-						background: #4acaa8;
+						background: #80263D;
 						color: #ffffff;
 						content: '\f0c9';
 						display: block;
