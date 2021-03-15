@@ -7,6 +7,39 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+:root {
+
+  --background_color: #201833;/*#2C2247;/*#222*/
+  --border_color:#010108;
+  
+  --main_title:#FF0040;
+  --subtitles:#FF0040;
+  --text_base_color:#888;
+  --text_special_color:#000000; 
+  
+  
+  --link_color:	#91DDEB;
+  --link_hover_color: #FF0040;
+  
+  
+  
+  --nav_background_color:#010108;
+  --nav_title: #FF0040; 
+  --nav_text: #fff;
+  --nav_hover:#f00;
+  --nav_active: #201833; /*deve igual ao --background_color*/
+  --nav_border: #FF0040;
+
+
+
+
+  --icons:#fff;/*linha 2466*/
+  --text_logo:#fff;
+  
+  --foot_back:#010108;/*#01010D;*/
+  --foot_text:#c0c0c0;
+}
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -28,11 +61,7 @@ section, summary, time, mark, audio, video {
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
-
-body {
-	line-height: 1;
-}
-
+	
 ol, ul {
 	list-style: none;
 }
@@ -49,10 +78,6 @@ blockquote, q {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
-
-body {
-	-webkit-text-size-adjust: none;
 }
 
 mark {
@@ -82,9 +107,15 @@ input, select, textarea {
 		box-sizing: inherit;
 	}
 
+
+
+
 	body {
-		background: #000;
+	background: var(--background_color);
+    -webkit-text-size-adjust: none;
+	line-height: 1;
 	}
+
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
@@ -98,7 +129,7 @@ input, select, textarea {
 		}
 
 	body, input, select, textarea {
-		color: #888;
+		color: var(--text_base_color);
 		font-family: "Lato", sans-serif;
 		font-size: 16pt;
 		font-weight: 400;
@@ -110,14 +141,14 @@ input, select, textarea {
 		-webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-		border-bottom: solid 1px #91DDEB;/*#e4e4e4;*/
-		color: #91DDEB;/*inherit;*/
+		border-bottom: solid 1px #91DDEB;
+		color: var(--link_color);
 		text-decoration: none;
 	}
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #FF0040 !important;
+			color: var(--link_hover_color) !important;
 		}
 
 	strong, b {
@@ -151,7 +182,7 @@ input, select, textarea {
 	}
 
 	h3 {
-		color: #ff0040;
+		color: var(--subtitles);
 		font-size: 1.75em;
 		line-height: 1.5em;
 	}
@@ -1792,7 +1823,7 @@ input, select, textarea {
 	}
 
 	header.major h2 {
-		color: #FF0040;#80263D;
+		color: var(--main_title);
 		font-size: 3.5em;
 	}
 
@@ -2434,6 +2465,19 @@ input, select, textarea {
 			display: inline-block;
 			padding: 0 1em 0 0;
 		}
+		ul.icons li a, 
+		ul.icons li a:link, 
+		ul.icons li a:visited,
+		ul.icons li a:hover,
+		ul.icons li a:active{
+			text-decoration: none;
+		}
+		
+		ul.icons li a i {
+			color:#222;
+			text-decoration: none;
+		}
+		
 
 			ul.icons li:last-child {
 				padding-right: 0 !important;
@@ -2707,8 +2751,8 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background: #80263D; /*background nav*/
-		color: #d2f2e9;
+		background: var(--nav_background_color); /*background nav*/
+		color: var(--nav_text);
 		height: 100%;
 		overflow-y: auto;
 		position: fixed;
@@ -2717,25 +2761,10 @@ input, select, textarea {
 		width: 15em;
 		right: 0;
 	}
+	
 
-		#header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
-			color: #ffffff;
-		}
-
-			#header h1 a, #header h2 a, #header h3 a, #header h4 a, #header h5 a, #header h6 a {
-				color: #ffffff;
-			}
-
-		#header header p {
-			color: #b7eadc;
-		}
-
-		#header a {
-			color: #d2f2e9;
-		}
-
-			#header a:hover {
-				color: #ffffff !important;
+		#header a:hover {
+				color: var(--nav_hover) !important;
 			}
 
 		#header > header {
@@ -2755,10 +2784,10 @@ input, select, textarea {
 			#header > header h1 {
 				font-size: 1.75em;
 				margin: 0;
+				color: var(--nav_title);
 			}
 
 			#header > header p {
-				color: #d2f2e9;
 				font-style: italic;
 				margin: 1em 0 0 0;
 			}
@@ -2778,15 +2807,16 @@ input, select, textarea {
 				margin: 0;
 			}
 
-				#header > footer .icons li a {
-					color: #b7eadc;
-				}
+			#header > footer .icons li a {
+				color: #ff0000;//var(--icons);
+			}
 
 		#header > nav {
 			-moz-flex-grow: 1;
 			-webkit-flex-grow: 1;
 			-ms-flex-grow: 1;
 			flex-grow: 1;
+			color: var(--nav_text);
 		}
 
 			#header > nav ul {
@@ -2797,7 +2827,7 @@ input, select, textarea {
 			}
 
 				#header > nav ul li {
-					border-top: solid 2px #a2a2a2;
+					border-top: solid 2px var(--nav_border);
 					display: block;
 					padding: 0;
 				}
@@ -2807,16 +2837,15 @@ input, select, textarea {
 						-webkit-transition: none;
 						-ms-transition: none;
 						transition: none;
+						color: inherit;
 						border: 0;
-						color: #fafafa !important;
 						display: block;
 						padding: 0.85em 0;
 						text-decoration: none;
 					}
 
 						#header > nav ul li a.active {
-							background: #222;
-							color: #fff !important;
+							background: var(--nav_active);
 						}
 
 					#header > nav ul li:first-child {
@@ -2836,14 +2865,14 @@ input, select, textarea {
 /* Wrapper */
 
 	#wrapper {
-		background: #222;
-		padding-right: 23em;
+		background: var(--background_color);
+		padding-right: 15em;
 	}
 
 /* Main */
 
 	#main > section {
-		border-top: solid 3px #101010;
+		border-top: solid 3px var(--border_color);
 	}
 
 		#main > section > .container {
@@ -2857,9 +2886,9 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
-		background: #101010;
+		background-color: var(--foot_back);
 		border-top: 0;
-		color: #c0c0c0;
+		color: var(--foot_text);
 		overflow: hidden;
 		padding: 4em 0 2em 0;
 	}
@@ -3048,7 +3077,7 @@ input, select, textarea {
 				top: 0;
 				width: 100%;
 				z-index: 10001;
-				background: #222;
+				background: transparent; /*var(--nav_background_color);*/
 				color: #fff;
 				min-width: 320px;
 			}
@@ -3067,6 +3096,7 @@ input, select, textarea {
 					#titleBar .title a {
 						border: 0;
 						text-decoration: none;
+						visibility: hidden;
 					}
 
 				#titleBar .toggle {
@@ -3094,7 +3124,7 @@ input, select, textarea {
 					}
 
 					#titleBar .toggle:before {
-						background: #80263D;
+						background: var(--nav_background_color);
 						color: #ffffff;
 						content: '\f0c9';
 						display: block;
