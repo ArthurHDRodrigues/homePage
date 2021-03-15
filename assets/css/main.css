@@ -2471,6 +2471,7 @@ input, select, textarea {
 	}
     ul.articles-list li,
 	ul.news-list li {
+	        font-family: inherit;
 			text-decoration: none;
 			display: inline-block;
 			/*margin: 0 0 1.6875em 0;*/
@@ -2479,12 +2480,13 @@ input, select, textarea {
 			vertical-align: top;
 			border-top: dotted 1px var(--news_border);
 			width:100%;
+			
 		}
 		ul.articles-list li:first-child,
 		ul.news-list li:first-child {
 					border-top: 0;
 					padding-top: 0;
-				}
+					}
 		
     ul.articles-list li:before,
 	ul.news-list li:before {
@@ -2508,7 +2510,6 @@ input, select, textarea {
 				border-radius: 100%;
 				color: var(--news_item);
 				display: block;
-				
 				left: 0;
 				position: absolute;
 				text-align: center;
