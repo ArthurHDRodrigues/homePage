@@ -10,7 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
-		<link rel="shortcut icon" type="image/png" href="images/plameira_icon.png"/>
+		<link rel="shortcut icon" type="image/png" href="../images/plameira_icon.png"/>
 	</head>
 	<body class="is-preload">
 
@@ -101,7 +101,7 @@
 								<div class="container">
 									<h3>SysCall</h3>
 									<p>
-										O artigo é muito bom, mas algumas coisas estão datadas ou mau explicadas. Antes de mais nada, é necessario
+										O artigo é muito bom, mas algumas coisas estão <span id="denied"> datadas </span> ou mau explicadas. Antes de mais nada, é necessario
 										 entender um pouco de assembly, para isso indico
 										 <a href="https://www.tutorialspoint.com/assembly_programming/index.htm">tutorial de assembly</a>.
 									</p><p>
@@ -180,7 +180,7 @@ int 0x80</code></pre>
 										Datado
 									</p>
 									<p>
-										Ainda não testei
+										Testei, deu tudo errado, kek
 									</p>
 <pre><code>#define __KERNEL__ /*Indica que estamos dentro do kernel
 * faz diferença na compilação de certos includes files*/
@@ -214,9 +214,21 @@ dmesg
 									<div class="container">
 										<h3>Honeypots</h3>
 
+
+<p>
+	O site <a href ="http://project.honeynet.org/"> The HoneyNet Project </a> está fora do ar.
+</p>
+
+<p>
+	O site <a href =http://"www.sans.org/resources/idfaq/honeypot3.php"> da Sans </a> também está fora do ar.
+</p>
+
+Mais informações leia meu artigo <a href ="../articles/honeypots.html"></a>
+
+
 									</div>
 								</section>
-								<!-- six-->
+								<!-- six
 								<section id="six">
 									<div class="container">
 										<h3>Sockets</h3>
@@ -227,7 +239,9 @@ dmesg
 								<section id="seven">
 									<div class="container">
 										<h3>Espionagem digital</h3>
-
+										<p id="denied">
+											Datado
+										</p>
 									</div>
 								</section>
 								<!-- eight-->
