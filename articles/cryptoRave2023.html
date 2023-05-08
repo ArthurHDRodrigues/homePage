@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<!--
+ Read Only by HTML5 UP
+ html5up.net | @ajlkn
+ Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+ <head>
+  <title>Tropical Hacker Hut</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <link rel="shortcut icon" type="image/png" href="../images/plameira_icon.png"/>
+ </head>
+ <body class="is-preload">
+  <!-- Header -->
+  <section id="header">
+   <header>
+     <h1 id="logo"><a href="../index.html">Tropical Hacker's Hut</a></h1>
+   </header>
+   <nav id="nav">
+    <ul>
+     <li><a href="#what" class="active">
+      O que é
+     </a></li>
+     <li><a href="#tools">
+      Ferramentas
+     </a></li>
+     <li><a href="#undo">
+      Desobsfurcação
+     </a></li>
+    </ul>
+   </nav>
+   <footer>
+    <ul class="icons">
+     <li><a href="https://github.com/ArthurHDRodrigues" class="icon brands fa-github"><span class="label">Github</span></a></li>
+    </ul>
+   </footer>
+  </section>
+  <!-- Wrapper -->
+  <div id="wrapper">
+   <!-- Main -->
+   <div id="main">
+    <!-- One -->
+    <section id="top">
+     <div class="container">
+      <header class="major">
+       <h2><i class="fa fa-eye-slash"></i> . Cryptorave 2023</h2>
+       <p>
+       Pequeno relato do que rolou na Cryptorave 2023
+       </p>
+      </header>
+      <p>
+       Escrito em: 07/05/2023
+      </p>
+     </div>
+    </section>
+    <section id="what">
+     <div class="container">
+      <h3>
+       <i class="fa fa-book" aria-hidden="true"> . </i>
+       O que é
+      </h3>
+      <p>
+      De acordo com o <a href="https://2023.cryptorave.org/">site oficial</a> Cryptorave é "um evento anual que reúne, em 36 horas, diversas atividades sobre segurança, criptografia, hacking, anonimato, privacidade e liberdade na rede. A CryptoRave é aberta e gratuita e realizada na cidade de São Paulo, as inscrições serão feitas no local."
+      </p>
+      <p>
+      A 7° edição do evento _ a primeira em 3 anos, devido a pandemia do COVID-19 _ ocorreu na CCSP em São Paulo entre os dias 5 e 6 de maio. Esse artigo visa registrar alguns comentários meus sobre as palestra que vi nesse evento. A programação completa do evento pode ser visto <a href="">aqui</a>.</p>
+      <p>
+      <ul>
+        <li><a href="#SuS">Mapeando a vigilância pública (Surveillance Under Surveillance)</a></li>
+        <li><a href="#SH">Primeiros passos com self-hosting</a></li>
+        <li><a href="#iot">Desafios de Segurança em Dispositivos IoT: Como mitigar riscos de vulnerabilidade</a></li>
+        <li><a href="#r2">Radare2: primeiros passos em engenharia reversa com a ferramenta </a></li>
+        <li><a href="#linux">Quem faz o Linux?</a></li>
+        <li><a href="#exploit">Introdução ao desenvolvimento de exploits para Kernel</a></li>
+      </ul>
+
+      </p>
+     </div>
+    </section>
+
+    <!-- Three -->
+    <section id="SuS">
+     <div class="container">
+      <h3>
+       <i class="fa fa-camera" aria-hidden="true"> 
+	       . </i>
+       Mapeando a vigilância pública (Surveillance Under Surveillance)
+      </h3>
+      <p>
+      A primeira palestra da noite trata de mapeamento de câmeras de segurança que filmam áreas (geralmente) públicas. Muitas dessas câmeras possuem acesso livre, isto é, qualquer um pode acessa-la. Enquanto que outras estão vulneráveis a ataques e podem ser hackeadas.
+      </p>
+      <p>
+      Sickeira - autor da palestra - se baseia em um <a href="https://sickeira.blogspot.com/2020/06/open-street-map-cameras-no-osm.html">texto de seu blog de 2020</a> para mostrar como registrar uma câmera no Open Street Map que automaticamente é compartilhada para o projeto <a href="https://sunders.uber.space/?lat=-23.65474509&lon=-46.49559975&zoom=14">Surveillance Under Surveillance</a>, que visa mapear tal vigilância.
+      </p>
+      <p>
+      <ul>
+      Existem 4 tipos de câmera registradas, cada uma representada por um ícone de uma cor:
+      <li>Vermelho: câmera filmando região pública cujo acesso é aberto a todos;</li>
+      <li>Azul: câmera filmando uma área exterior e com acesso restrito;</li>
+      <li>Verde:câmera filmando área interior e com acesso restrito; e</li>
+      <li>Marrom: câmera sem informações sobre o tipo de acesso.</li>
+      </ul></p>
+      <p>
+      A maioria das câmeras mapeadas são em Santo André, onde Sickeira mora. Não encontrei muitas outras câmeras acessíveis fora de lá.</p>
+     </div>
+    </section>
+    <section id="SH">
+     <div class="container">
+      <h3>
+       <i class="fa fa-server" aria-hidden="true"> . </i>
+       Primeiros passos com self-hosting       
+      </h3>
+      <p>Nessa curta apresentação, Caio Volpato mostra os primeiros passos para self-hosting. Os slides que podem ser baixados do <a href="https://caioau.net/blog/cr2023-intro-selfhosting/">site dele</a> são uma ótima referência e dispensam mais comentários.</p>
+     </div>
+    </section>
+
+
+    <section id="iot">
+     <div class="container">
+      <h3>  
+       <i class="fa-solid fa-wifi"> </i> . 
+      Desafios de Segurança em Dispositivos IoT: Como mitigar riscos de vulnerabilidade
+      </h3>
+      <p>Nessa curta apresentação, Caio Volpato mostra os primeiros passos para self-hosting. Os slides que podem ser baixados do <a href="https://caioau.net/blog/cr2023-intro-selfhosting/">site dele</a> são uma ótima referência e dispensam mais comentários.</p>
+     </div>
+    </section>
+
+
+
+
+
+       <i class="fa-brands fa-linux"> </i> . 
+
+
+
+   </div>
+   <!-- Footer -->
+   <section id="footer">
+    <div class="container">
+     <ul class="copyright">
+      <li>Designed by Arthur Rodrigues</li>
+      <li>Based on the design by <a href="http://html5up.net">HTML5 UP</a></li>
+     </ul>
+    </div>
+   </section>
+  </div>
+
+  <!-- Scripts-->
+   <script src="../assets/js/jquery.min.js"></script>
+   <script src="../assets/js/jquery.scrollex.min.js"></script>
+   <script src="../assets/js/jquery.scrolly.min.js"></script>
+   <script src="../assets/js/browser.min.js"></script>
+   <script src="../assets/js/breakpoints.min.js"></script>
+   <script src="../assets/js/util.js"></script>
+   <script src="../assets/js/main.js"></script>
+
+ </body>
+</html>
